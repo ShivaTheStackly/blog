@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Stackly</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 26px;
+    }
+    .logo img {
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    /* Navigation Styles */
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    .main-nav li {
+      position: relative;
+    }
+    .main-nav > ul > li > a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      display: block;
+    }
+    .main-nav > ul > li > a:hover {
+      background-color: #d60000;
+      color: #fff;
+    }
+
+    /* Dropdown */
+    .main-nav li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 0;
+      list-style: none;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    .main-nav li:hover ul {
+      display: block;
+    }
+    .main-nav li ul li a {
+      padding: 10px 15px;
+      display: block;
+      color: #000;
+      background-color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .main-nav li ul li a:hover {
+      background-color: #eee;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .right-section .icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .sign-in {
+      background: #d60000;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Secondary Nav */
+    .secondary-nav {
+      background: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    .secondary-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 12px;
+      border-right: 1px solid #444;
+    }
+    .secondary-nav a:last-child {
+      border-right: none;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Header -->
+<div class="top-header">
+  <div class="left-section">
+    <div class="hamburger">☰</div>
+    <div class="logo">
+      <img src="logo-stackly (1).png" alt="logo">
+     
+    </div>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li>
+        <a href="#">HOME ⌄</a>
+        <ul>
+          <li><a href="#">Home Style 1</a></li>
+          <li><a href="#">Home Style 2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">POST FEATURES ⌄</a>
+        <ul>
+          <li><a href="#">Feature List</a></li>
+          <li><a href="#">Featured Post</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">TECHNOLOGY ⌄</a>
+        <ul>
+          <li><a href="#">AI & Robotics</a></li>
+          <li><a href="#">Gadgets</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">BREAKING NEWS ⌄</a>
+        <ul>
+          <li><a href="#">Headlines</a></li>
+          <li><a href="#">Alerts</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">PAGES ⌄</a>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="right-section">
+    <!-- Bookmark Icon -->
+    <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">🔖</div>
+
+    <!-- Dark Mode / Light Mode Toggle -->
+    <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+
+    <!-- Search Icon -->
+    <div class="icon" id="search-icon" onclick="toggleSearch()">🔍</div>
+
+    <button class="sign-in">SIGN IN</button>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<div class="secondary-nav">
+  <a href="#">Travel</a>
+  <a href="#">Environment News</a>
+  <a href="#">Business</a>
+  <a href="#">Science Discoveries</a>
+  <a href="#">Health Insights</a>
+  <a href="#">Technology</a>
+  <a href="#">Education</a>
+  <a href="#">Political Analysis</a>
+  <a href="#">International</a>
+</div>
+
+<script>
+  // Bookmark page functionality
+  function bookmarkPage() {
+    alert("Page Bookmarked!");
+  }
+
+  // Toggle dark mode / light mode
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const icon = document.getElementById('dark-mode-toggle');
+    icon.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙'; // Change icon to light mode when dark mode is active
+  }
+
+  // Toggle search bar (simple example)
+  function toggleSearch() {
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search...';
+    document.body.appendChild(searchInput);
+    searchInput.focus();
+  }
+</script>
+
+</body>
+</html>
