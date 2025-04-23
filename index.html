@@ -194,6 +194,9 @@
     background-color: #e63946;
     color: white;
   }
+  h1{
+    font-size: 20px;
+  }
   
   .date {
     font-size: 12px;
@@ -201,7 +204,7 @@
   }
   
   .summary {
-    margin: 10px 0;
+    margin: -20px 0;
   }
   
   .meta {
@@ -221,7 +224,7 @@
   }
   
   .news-list li {
-    padding: 5px 0;
+    padding: -5px 0;
     font-size: 14px;
     border-bottom: 1px solid #eee;
   }
@@ -233,7 +236,381 @@
   display: block;
   margin: 0 auto;
 }
+.news-tabs {
+  font-family: 'Segoe UI', sans-serif;
+  width: 300px;
+}
 
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  transition: border-color 0.3s ease;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid #d32f2f;
+  color: #d32f2f;
+}
+
+.tab-content {
+  padding: 15px 5px;
+}
+
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-content li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.video-highlight {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-highlight img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  color: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.play-icon {
+  font-size: 24px;
+  background: red;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Letter Carousel Styling */
+.letter-carousel {
+  margin-top: -20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.letter-carousel h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.carousel-slide {
+  min-width: 300px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.carousel-slide p {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  margin-top: 15px;
+}
+
+.carousel-controls button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.carousel-controls button:hover {
+  background-color: #444;
+}
+h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      width: 10px;
+      height: 20px;
+      background: #c00000;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-header a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .news-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .main-article {
+      background: white;
+      border: 1px solid #eee;
+      padding: 15px;
+      border-radius: 6px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .main-article img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .main-article .tag {
+      background: #c00000;
+      color: white;
+      padding: 4px 10px;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 10px;
+      border-radius: 2px;
+    }
+
+    .main-article h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #777;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .side-articles {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .side-article {
+      background: white;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      border-radius: 6px;
+      align-items: center;
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .side-article:hover {
+      transform: scale(1.02);
+    }
+
+    .side-article img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .side-article .info {
+      flex: 1;
+    }
+
+    .side-article .info h4 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .side-article .info span {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .ad-banner {
+      background: url('https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/Side-advertisement.svg') no-repeat center center;
+      background-size: cover;
+      border-radius: 6px;
+      height: 600px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section-header h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+    }
+    .section-header h2::before {
+      content: '';
+      width: 10px;
+      height: 20px;
+      background: #c00000;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+    .section-header a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+    .highlight {
+      grid-column: span 2;
+      display: flex;
+      gap: 20px;
+    }
+    .highlight img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .highlight .text {
+      background: #f0f7fc;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .highlight .text h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .highlight .text p {
+      font-size: 14px;
+      color: #555;
+    }
+    .highlight .text .date {
+      font-size: 13px;
+      color: #777;
+      margin-top: 10px;
+    }
+    .sidebar article {
+      display: flex;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 10px;
+    }
+    .sidebar article img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+    .sidebar h4 {
+      font-size: 14px;
+    }
+    .sidebar .date {
+      font-size: 12px;
+      color: #777;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      padding: 10px;
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card .category {
+      color: #c00000;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .card h4 {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .card .date {
+      font-size: 12px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
@@ -250,35 +627,37 @@
   <nav class="main-nav">
     <ul>
       <li>
-        <a href="#">HOME ⌄</a>
+        <a href="#">HOME</a>
+        
+      </li>
+      <li>
+        <a href="#">CATEGORIES</a>
         <ul>
-          <li><a href="#">Home Style 1</a></li>
-          <li><a href="#">Home Style 2</a></li>
+          <li><a href="#">Business & Finance</a></li>
+          <li><a href="#"> Science</a></li>
+          <li><a href="#"> Entertainment</a></li>
+          <li><a href="#"> Education</a></li>
+          
         </ul>
       </li>
       <li>
-        <a href="#">POST FEATURES ⌄</a>
+        <a href="#">SINGLE BLOG POST</a>
         <ul>
-          <li><a href="#">Feature List</a></li>
-          <li><a href="#">Featured Post</a></li>
+          <li><a href="#">#AI & Robotics</a></li>
+          <li><a href="#">#RemoteWork</a></li>
+          <li><a href="#">#Minimalism</a></li>
+          <li><a href="#">#SustainableLiving</a></li>
         </ul>
       </li>
       <li>
-        <a href="#">TECHNOLOGY ⌄</a>
-        <ul>
-          <li><a href="#">AI & Robotics</a></li>
-          <li><a href="#">Gadgets</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">BREAKING NEWS ⌄</a>
+        <a href="#">BREAKING NEWS </a>
         <ul>
           <li><a href="#">Headlines</a></li>
           <li><a href="#">Alerts</a></li>
         </ul>
       </li>
       <li>
-        <a href="#">PAGES ⌄</a>
+        <a href="#">PAGES</a>
         <ul>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact</a></li>
@@ -314,6 +693,7 @@
   <a href="#">Political Analysis</a>
   <a href="#">International</a>
 </div>
+
 <div class="container">
 
   <!-- Left Column -->
@@ -341,23 +721,77 @@
     <h1>The Joy Of Cooking: Rediscovering The Pleasure Of Homemade</h1>
     <p class="summary">Embracing a balanced lifestyle is key to achieving overall well-being and happiness. Start by practicing mindfulness through meditation.</p>
     <div class="meta">👤 McKiney | 📅 March 26, 2024 | 💬 3 Comments</div>
+    <div class="letter-carousel">
+      <h2>Latest Updates</h2>
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <p>Update 1: New trends in technology for 2024</p>
+        </div>
+        <div class="carousel-slide">
+          <p>Update 2: How AI is transforming industries</p>
+        </div>
+        <div class="carousel-slide">
+          <p>Update 3: Innovations in sustainable living</p>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="carousel-controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div>
+    
   </div>
 
   <!-- Right Column -->
   <div class="right-column">
-    <div class="card dark-card">
-      <h3>Data Talk: Best Apps, Code Tips, Cool Gear</h3>
-    </div>
-
-    <div class="card">
-      <h3>Latest News</h3>
-      <ul class="news-list">
-        <li>01. Smart factories leverage IoT and AI</li>
-        <li>02. The Joy of Cooking: Rediscovering</li>
-        <li>03. The Future of Work: Adapting to</li>
-        <li>04. Elevate Your Brunch Game</li>
-        <li>05. Into the Wild: Embarking on Epic</li>
-      </ul>
+    <div class="news-tabs">
+      <div class="tabs">
+        <button class="tab-button active" onclick="showTab('latest')">Latest News</button>
+        <button class="tab-button" onclick="showTab('business')">Business News</button>
+        <button class="tab-button" onclick="showTab('sports')">Sports News</button>
+      </div>
+    
+      <div class="tab-content" id="latest">
+        <ul>
+          <li><strong>Smart factories leverage IoT and AI</strong><br><small>March 26, 2024</small></li>
+          <li><strong>The Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
+          <li><strong>Smart factories leverage IoT and AI</strong><br><small>March 26, 2024</small></li>
+          <li><strong>The Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
+          <li><strong>Smart factories leverage IoT and AI</strong><br><small>March 26, 2024</small></li>
+          <li><strong>The Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
+        </ul>
+      </div>
+    
+      <div class="tab-content" id="business" style="display: none;">
+        <ul>
+          <li><strong>The Future of Work: Adapting</strong><br><small>March 26, 2024</small></li>
+          <li><strong>Global Markets Face Challenges</strong><br><small>April 10, 2024</small></li>
+          <li><strong>The Future of Work: Adapting</strong><br><small>March 26, 2024</small></li>
+          <li><strong>Global Markets Face Challenges</strong><br><small>April 10, 2024</small></li>
+          <li><strong>The Future of Work: Adapting</strong><br><small>March 26, 2024</small></li>
+          <li><strong>Global Markets Face Challenges</strong><br><small>April 10, 2024</small></li>
+        </ul>
+      </div>
+    
+      <div class="tab-content" id="sports" style="display: none;">
+        <ul>
+          <li><strong>Champions League Final Highlights</strong><br><small>May 15, 2024</small></li>
+          <li><strong>Olympics 2024 Preview</strong><br><small>June 2, 2024</small></li>
+          <li><strong>Olympics 2024 Preview</strong><br><small>June 2, 2024</small></li>
+          <li><strong>Champions League Final Highlights</strong><br><small>May 15, 2024</small></li>
+          <li><strong>Olympics 2024 Preview</strong><br><small>June 2, 2024</small></li>
+          <li><strong>Olympics 2024 Preview</strong><br><small>June 2, 2024</small></li>
+        </ul>
+      </div>
+      <div class="video-highlight">
+        <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/business.webp" alt="Video Preview">
+        <div class="video-overlay">
+          <div class="play-icon">▶</div>
+          <div class="video-title">Data Talk: Best Apps, Code Tips, Cool Gear,</div>
+        </div>
+      </div>
+      
     </div>
   </div>
 
@@ -387,6 +821,141 @@
   </div>
 
 </div>
+<div class="section-header">
+  <h2>World News</h2>
+  
+</div>
+
+<div class="news-container">
+  <!-- Main Article -->
+  <div class="main-article">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/wd-1-1.webp" alt="Main News">
+    <div class="tag">WORLD</div>
+    <h3>Biden stands defiant on critical night – but gaffes mar fightback</h3>
+    <div class="meta">
+      <span>👤 McKiney</span>
+      <span>📅 May 31, 2024</span>
+    </div>
+  </div>
+
+  <!-- Side Articles -->
+  <div class="side-articles">
+    <div class="side-article">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/wd2.webp" alt="">
+      <div class="info">
+        <h4>England have to be ‘perfect’ to beat Spain</h4>
+        <span>📅 May 31, 2024</span>
+      </div>
+    </div>
+    <div class="side-article">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12.webp" alt="">
+      <div class="info">
+        <h4>China hits back at Nato over Russia accusations</h4>
+        <span>📅 July 12, 2024</span>
+      </div>
+    </div>
+    <div class="side-article">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/wd-1-3.webp" alt="">
+      <div class="info">
+        <h4>From rough sleeping to advising Prince William</h4>
+        <span>📅 July 12, 2024</span>
+      </div>
+    </div>
+    <div class="side-article">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12.webp" alt="">
+      <div class="info">
+        <h4>From rough sleeping to advising Prince William</h4>
+        <span>📅 July 12, 2024</span>
+      </div>
+    </div>
+    <div class="side-article">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12.webp" alt="">
+      <div class="info">
+        <h4>From rough sleeping to advising Prince William</h4>
+        <span>📅 July 12, 2024</span>
+      </div>
+    </div>
+    <div class="side-article">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12.webp" alt="">
+      <div class="info">
+        <h4>The Killers give England fans euphoric night at</h4>
+        <span>📅 July 12, 2024</span>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Ad Banner -->
+  <div class="ad-banner"></div>
+</div>
+<div class="section-header">
+  <h2>Must Read</h2>
+
+</div>
+
+<div class="grid">
+  <div class="highlight">
+    <img src="https://byteflows.net/wp/forcast-main/wp/wp-content/uploads/2024/05/image-10.webp" alt="Winter Tips">
+    <div class="text">
+      <div>
+        <span class="category">TRAVEL</span>
+        <h3>Exploring Europe by Train: A Scenic Adventure</h3>
+        <p>Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam Risus rutrum ultrices pretium dolor</p>
+      </div>
+      <div class="date">📅 May 31, 2024</div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <article>
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/Image-7.webp" alt="Biden">
+      <div>
+        <h4>Biden stands defiant on critical night – but</h4>
+        <div class="date">📅 May 31, 2024</div>
+      </div>
+    </article>
+    <article>
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/Image-7.webp" alt="FA">
+      <div>
+        <h4>FA wants Southgate to stay as England boss</h4>
+        <div class="date">📅 May 31, 2024</div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/Image-7.webp" alt="Solo Travel">
+    <div class="category">TRAVEL</div>
+    <h4>The Ultimate Guide to Solo Travel: Tips</h4>
+    <div class="date">📅 May 30, 2024</div>
+  </div>
+  <div class="card">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/food-new.webp" alt="Healthy Eating">
+    <div class="category">FOOD</div>
+    <h4>Healthy Eating Made Easy: Nutritious and</h4>
+    <div class="date">📅 May 30, 2024</div>
+  </div>
+  <div class="card">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-13-1.webp" alt="Wearable Tech">
+    <div class="category">TECHNOLOGY</div>
+    <h4>The Future of Wearable Tech: Innovations to</h4>
+    <div class="date">📅 May 31, 2024</div>
+  </div>
+  <div class="card">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/Image-9.webp" alt="Hosting">
+    <div class="category">BUSINESS</div>
+    <h4>The Art of Hosting: Planning the Perfect</h4>
+    <div class="date">📅 May 31, 2024</div>
+  </div>
+  <div class="card">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-13.webp" alt="Cancer Help">
+    <div class="category">HEALTH</div>
+    <h4>Young woman help cancer patient around the</h4>
+    <div class="date">📅 July 11, 2024</div>
+  </div>
+</div>
 <script>
   // Bookmark page functionality
   function bookmarkPage() {
@@ -408,6 +977,53 @@
     document.body.appendChild(searchInput);
     searchInput.focus();
   }
+  function showTab(tabId) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.display = 'none';
+      });
+    
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('active');
+      });
+    
+      // Show the selected tab and activate the button
+      document.getElementById(tabId).style.display = 'block';
+      event.target.classList.add('active');
+    }
+    let currentLetterSlide = 0;
+
+const letterSlides = document.querySelectorAll('.carousel-slide');
+const totalLetterSlides = letterSlides.length;
+
+const prevLetterButton = document.querySelector('.prev');
+const nextLetterButton = document.querySelector('.next');
+
+// Function to update the slide visibility
+function updateLetterCarousel() {
+  // Hide all slides
+  letterSlides.forEach(slide => slide.style.display = 'none');
+  
+  // Show the current slide
+  letterSlides[currentLetterSlide].style.display = 'block';
+}
+
+// Show the next slide
+nextLetterButton.addEventListener('click', () => {
+  currentLetterSlide = (currentLetterSlide + 1) % totalLetterSlides;
+  updateLetterCarousel();
+});
+
+// Show the previous slide
+prevLetterButton.addEventListener('click', () => {
+  currentLetterSlide = (currentLetterSlide - 1 + totalLetterSlides) % totalLetterSlides;
+  updateLetterCarousel();
+});
+
+// Initial setup
+updateLetterCarousel();
+
 </script>
 
 </body>
