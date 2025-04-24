@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -766,6 +767,440 @@ h2 {
   margin-top: 1rem;
   color: #444;
 }
+.contain {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f8f8f8;
+  transition: background 0.3s ease; /* Smooth background color transition */
+}
+
+
+.sideba {
+  position: sticky;
+  top: 20px;
+  width: 300px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease; /* Sidebar hover shadow */
+}
+
+.sideba:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hover effect on sidebar */
+}
+
+.sideba h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Popular Item */
+.popular-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.popular-item:hover {
+  transform: scale(1.05); /* Image and text zoom effect on hover */
+}
+
+.popular-item img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease; /* Image zoom effect */
+}
+
+.popular-item img:hover {
+  transform: scale(1.1); /* Zoom-in effect on image hover */
+}
+
+.popular-item h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  transition: color 0.3s ease; /* Text color change on hover */
+}
+
+.popular-item:hover h4 {
+  color: #d20000; /* Change text color on hover */
+}
+
+.popular-item span {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+}
+
+.articlee {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.articlee:hover {
+  transform: scale(1.02); /* Zoom effect for articles */
+}
+
+.articlee img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease; /* Image zoom effect */
+}
+
+.articlee img:hover {
+  transform: scale(1.1); /* Zoom-in effect on image hover */
+}
+
+.articlee .text {
+  flex: 1;
+}
+
+.articlee .tag {
+  font-size: 0.75rem;
+  background: red;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  transition: background-color 0.3s ease; /* Tag color change on hover */
+}
+
+.articlee:hover .tag {
+  background-color: #ff6347; /* Change tag color on hover */
+}
+
+.articlee h3 {
+  margin: 0.2rem 0;
+  transition: color 0.3s ease; /* Title color change on hover */
+}
+
+.articlee:hover h3 {
+  color: #d20000; /* Change title color on hover */
+}
+
+.articlee p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  transition: color 0.3s ease; /* Paragraph color change on hover */
+}
+
+.articlee:hover p {
+  color: #666; /* Change paragraph color on hover */
+}
+
+.metaa {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.top-stories {
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.top-stories .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.top-stories .header h2 {
+  font-size: 1.25rem;
+}
+
+.top-stories .view-all {
+  font-size: 0.9rem;
+  color: #d20000;
+  cursor: pointer;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.story {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease; /* Hover effect for story cards */
+}
+
+.story:hover {
+  transform: scale(1.05); /* Story card zoom effect */
+}
+
+.story img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.story .tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.tag.tech {
+  background: #3b82f6;
+}
+.tag.breaking {
+  background: #ef4444;
+}
+.tag.travel {
+  background: #10b981;
+}
+
+.story h3 {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease; /* Title color change on hover */
+}
+
+.story:hover h3 {
+  color: #d20000; /* Change title color on hover */
+}
+
+.story .metaa {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.social-follow {
+  background: #fff;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.social-follow h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.social-follow h2 span {
+  display: block;
+  color: #111;
+  font-weight: 600;
+}
+
+.social-follow p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.8rem 0 1.5rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 0.7rem;
+  border-radius: 6px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-card:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+.social-card i {
+  font-size: 1.5rem;
+  width: 30px;
+  text-align: center;
+}
+
+.social-card h4 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.social-card span {
+  font-size: 0.8rem;
+  color: #888;
+}
+.footer {
+  background-color: #16191f;
+  color: #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.social-icons i {
+  margin-right: 10px;
+  font-size: 1rem;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #fff;
+}
+
+.top-posts .post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.top-posts img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.top-posts p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #fff;
+}
+
+.top-posts span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.logo {
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.scroll-top button {
+  background: red;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.footer-bottom-secondary {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-secondary .secondary-nav a {
+  margin: 0 8px;
+  color: #aaa;
+  text-decoration: none;
+}
+
   </style>
 </head>
 <body>
@@ -1213,6 +1648,298 @@ h2 {
     </div>
   </div>
 </section>
+<div class="contain">
+  <!-- Sticky Left Sidebar -->
+  <aside class="sideba">
+    <h2><i class="fa-solid fa-location-arrow"></i> Most Popular</h2>
+    <div class="popular-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/wd-1-1.webp" alt="" />
+      <div>
+        <h4>Biden stands defiant on critical night</h4>
+        <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
+      </div>
+      <i class="fa-regular fa-bookmark"></i>
+    </div>
+    <div class="popular-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12-4.webp" alt="" />
+      <div>
+        <h4>Work-Life Balance: Tips for Juggling</h4>
+        <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
+      </div>
+      <i class="fa-regular fa-bookmark"></i>
+    </div>
+    <div class="popular-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
+      <div>
+        <h4>Winter Dressing Tips When It’s Cold</h4>
+        <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+      </div>
+      <i class="fa-regular fa-bookmark"></i>
+    </div>
+    <div class="popular-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
+      <div>
+        <h4>Winter Dressing Tips When It’s Cold</h4>
+        <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+      </div>
+      <i class="fa-regular fa-bookmark"></i>
+    </div>
+    <div class="social-follow">
+      <h2>Your Trusted Source for<br><span>Accurate and Timely Updates!</span></h2>
+      <p>Lorem ipsum dolor sit amet consectetu. Ut tellus many suspendisse aliquam as rutrum ready. Lorem ipsum dolor sit amet consectetur.</p>
+    
+      <div class="social-grid">
+        <div class="social-card facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+          <div>
+            <h4>Facebook</h4>
+            <span>23k Likes</span>
+          </div>
+        </div>
+        <div class="social-card twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+          <div>
+            <h4>Twitter</h4>
+            <span>56k Followers</span>
+          </div>
+        </div>
+        <div class="social-card youtube">
+          <i class="fa-brands fa-youtube"></i>
+          <div>
+            <h4>Youtube</h4>
+            <span>56k Subscribe</span>
+          </div>
+        </div>
+        <div class="social-card spotify">
+          <i class="fa-brands fa-spotify"></i>
+          <div>
+            <h4>Spotify</h4>
+            <span>14k Followers</span>
+          </div>
+        </div>
+        <div class="social-card instagram">
+          <i class="fa-brands fa-instagram"></i>
+          <div>
+            <h4>Instagram</h4>
+            <span>5M Followers</span>
+          </div>
+        </div>
+        <div class="social-card pinterest">
+          <i class="fa-brands fa-pinterest"></i>
+          <div>
+            <h4>Pinterest</h4>
+            <span>59k Followers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Article Content -->
+   <!-- Right Content -->
+<section class="top-stories">
+<div class="header">
+  <h2><i class="fa-solid fa-location-arrow"></i> Top Most Stories</h2>
+  <div class="view-all">View All <i class="fa-solid fa-arrow-right"></i></div>
+</div>
+
+<div class="story-grid">
+  <div class="story">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/tech-2.webp" alt="" />
+    <span class="tag red">Business</span>
+    <h3>Winter Dressing Tips When It’s Really ready to us more Cold Out</h3>
+    <div class="metaa">
+      <span><i class="fa-regular fa-user"></i> McKiney</span>
+      <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+      <i class="fa-regular fa-bookmark"></i>
+    </div>
+  </div>
+  <div class="story">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-15.webp" alt="" />
+    <span class="tag red">Business</span>
+    <h3>Why both businesses and scammers love India’s payment system</h3>
+    <div class="metaa">
+      <span><i class="fa-regular fa-user"></i> McKiney</span>
+      <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+      <i class="fa-regular fa-bookmark"></i>
+    </div>
+  </div>
+  <div class="story">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/travel.webp" alt="" />
+    <span class="tag tech">TECHNOLOGY</span>
+    <h3>Green Tech: Sustainable Innovations</h3>
+  </div>
+  <div class="story">
+    <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/tec-2.webp" alt="" />
+    <span class="tag breaking">BREAKING NEWS</span>
+    <h3>The Art of Hosting: Planning a Conference</h3>
+  </div>
+  
+</section>
+
+  <main class="main-content">
+    <div class="articlee">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-13.webp" alt="" />
+      <div class="text">
+        <span class="tag red">HEALTH</span>
+        <h3>Young woman help cancer patient around the world</h3>
+        <p>To mark the first UK show of artist Henri Brande...</p>
+        <div class="metaa">
+          <span><i class="fa-regular fa-user"></i> McKiney</span>
+          <span><i class="fa-regular fa-calendar"></i> July 11, 2024</span>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="articlee">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
+      <div class="text">
+        <span class="tag red">WORLD</span>
+        <h3>Biden stands defiant on critical night – but gaffes mar fightback</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="metaa">
+          <span><i class="fa-regular fa-user"></i> McKiney</span>
+          <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="articlee">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12-4.webp" alt="" />
+      <div class="text">
+        <span class="tag red">BREAKING NEWS</span>
+        <h3>Work-Life Balance: Tips for Juggling Career and Personal Life</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="metaa">
+          <span><i class="fa-regular fa-user"></i> McKiney</span>
+          <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 3 more articles like this for a total of 6 -->
+    <div class="articlee">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
+      <div class="text">
+        <span class="tag red">TECH</span>
+        <h3>AI Revolution: What’s Next for the Industry</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="metaa">
+          <span><i class="fa-regular fa-user"></i> McKiney</span>
+          <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="articlee">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
+      <div class="text">
+        <span class="tag red">BUSINESS</span>
+        <h3>Why startups love the India UPI ecosystem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="metaa">
+          <span><i class="fa-regular fa-user"></i> McKiney</span>
+          <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="articlee">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/tec-2.webp" alt="" />
+      <div class="text">
+        <span class="tag red">LIFESTYLE</span>
+        <h3>5 Easy Ways to Unplug and Destress</h3>
+        <p>Lorem ipsum dolor sit amet consectetur...</p>
+        <div class="metaa">
+          <span><i class="fa-regular fa-user"></i> McKiney</span>
+          <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h3>About Us</h3>
+      <p>Lorem ipsum dol consectetur adipiscing neque any adipiscing the ni consectetur the a any adipiscing.</p>
+      <p><strong>Email Us:</strong> infoemail@gmail.com</p>
+      <p><strong>Contact:</strong> +5-784-8894-678</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Quick Link</h3>
+      <ul>
+        <li>Our Authors</li>
+        <li>My Account</li>
+        <li>Bookmarks</li>
+        <li>FAQ</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-section categories">
+      <h3>Top Categories</h3>
+      <ul>
+        <li>Computers</li>
+        <li>Robotics</li>
+        <li>Mobile</li>
+        <li>Technology</li>
+        <li>Accessories</li>
+      </ul>
+    </div>
+
+    <div class="footer-section top-posts">
+      <h3>Top Posts</h3>
+      <div class="post">
+        <img src="https://via.placeholder.com/60x60" alt="Smart factories leverage IoT and AI">
+        <div>
+          <p>Smart factories leverage IoT and AI,</p>
+          <span><i class="far fa-calendar-alt"></i> March 26, 2024</span>
+        </div>
+      </div>
+      <div class="post">
+        <img src="https://via.placeholder.com/60x60" alt="The Joy of Cooking">
+        <div>
+          <p>The Joy of Cooking: Rediscovering the</p>
+          <span><i class="far fa-calendar-alt"></i> March 26, 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="branding">
+      <div class="logo"><img src="logo-stackly (1).png" alt="">
+    </div>
+    <nav class="footer-nav">
+      <a href="#">HOME</a>
+      <a href="#">FEATURES</a>
+      <a href="#">CATEGORIES</a>
+      <a href="#">DESIGN</a>
+      <a href="#">CONTACT</a>
+    </nav>
+    <div class="scroll-top">
+      <button><i class="fas fa-chevron-up"></i></button>
+    </div>
+  </div>
+
+
+</footer>
+
 <script>
   // Bookmark page functionality
   function bookmarkPage() {
