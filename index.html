@@ -2050,7 +2050,96 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 .tab-content, .card, .main-article, .side-article, .highlight .text, .articlee, .story {
   padding: 15px;
 }
+.trending-carousel {
+    width: 100%;
+    position: relative;
+}
 
+.trending-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.icon-settings {
+    margin-right: 10px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-left: 150px;
+}
+
+.carousel-item {
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 60%; /* Reduced image size */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.carousel-item p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+    .carousel-item {
+        width: 50%; /* 2 items per row on tablet and mobile screens */
+    }
+    
+    .carousel-item img {
+        width: 80%; /* Adjusting image size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .carousel-item {
+        width: 100%; /* 1 item per row on mobile screens */
+        padding: 5px; /* Reduced padding for small screens */
+    }
+
+    .carousel-item img {
+        width: 90%; /* Adjust image width for mobile */
+    }
+
+    .trending-label {
+        font-size: 20px; /* Slightly smaller label font size */
+    }
+
+    .carousel-item p {
+        font-size: 14px; /* Smaller text for better readability on mobile */
+    }
+}
   </style>
 </head>
 <body>
@@ -2067,7 +2156,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   <nav class="main-nav">
     <ul>
       <li>
-        <a href="#">HOME</a>
+        <a href="index.html">HOME</a>
         
       </li>
      
@@ -2076,7 +2165,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
         <a href="#">BREAKING NEWS </a>
         <ul>
           <li><a href="#">Headlines</a></li>
-          <li><a href="#">Alerts</a></li>
+          <li><a href="#">Article</a></li>
         </ul>
       </li>
       <li>
@@ -2093,7 +2182,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
+          
         </ul>
       </li>
     </ul>
@@ -2114,7 +2203,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 
 <!-- Bottom Nav -->
 <div class="secondary-nav">
-  <a href="#">Travel</a>
+  <a href="travel.html">Travel</a>
   <a href="#">Environment News</a>
   <a href="#">Business</a>
   <a href="#">Science Discoveries</a>
@@ -2225,7 +2314,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       
     </div>
   </div>
-
+  
   <!-- Featured Section -->
   <div class="featured-section">
     <h2>Featured Post</h2>
@@ -2250,8 +2339,41 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       </div>
     </div>
   </div>
-
 </div>
+<div class="trending-carousel">
+  <div class="trending-label">
+    <i class="icon-settings"></i> TRENDING
+  </div>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/lifestyle-new.webp" alt="Woman Listens">
+      <span class="badge">MUSIC</span>
+      <p>Woman Listens to Music</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/03/food.webp" alt="Crowd">
+      <span class="badge">GAMES</span>
+      <p>Crowd in the Music Concert</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/03/helth-2.webp" alt="Headphones">
+      <span class="badge">MUSIC</span>
+      <p>Headphones Make Awesome Sound</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/03/tech-n-1.webp" alt="Girl Entertaining">
+      <span class="badge">ENTERTAINMENT</span>
+      <p>Beautiful Girl Entertains</p>
+    </div>
+    
+    <!-- Add more carousel-items as needed -->
+  </div>
+</div>
+
 <div class="section-header">
   <h2>World News</h2>
   
@@ -2891,6 +3013,18 @@ const hamburger = document.querySelector('.hamburger');
   hamburger.addEventListener('click', () => {
     mainNav.classList.toggle('active');
   });
+
+  let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+        
+        function showNextItem() {
+          items[currentIndex].style.display = 'none';
+          currentIndex = (currentIndex + 1) % totalItems;
+          items[currentIndex].style.display = 'block';
+        }
+        
+        setInterval(showNextItem, 3000); // Change every 3 seconds
 </script>
 
 </body>
