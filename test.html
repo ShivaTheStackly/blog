@@ -632,7 +632,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   <nav class="main-nav">
     <ul>
       <li>
-        <a href="index.html">HOME</a>
+        <a href="home.html">HOME</a>
         
       </li>
      
@@ -641,24 +641,24 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
         <a href="#">BREAKING NEWS </a>
         <ul>
           <li><a href="#">Headlines</a></li>
-          <li><a href="#">Alerts</a></li>
+          <li><a href="breaking.html">Alerts</a></li>
         </ul>
       </li>
       <li>
         <a href="#">SUBSCRIPTION</a>
         <ul>
-          <li><a href="#">Wekkly Updates</a></li>
-          <li><a href="#">Monthly NewsLetter</a></li>
-          <li><a href="#">Special Announcement</a></li>
+          <li><a href="signin.html">Wekkly Updates</a></li>
+          <li><a href="signin.html">Monthly NewsLetter</a></li>
+          <li><a href="signin.html">Special Announcement</a></li>
         </ul>
       </li>
       <li>
         <a href="#">PAGES</a>
         <ul>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="login.html">Contact</a></li>
           <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
+          <li><a href="signin.html">Register</a></li>
         </ul>
       </li>
     </ul>
@@ -679,15 +679,11 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 
 <!-- Bottom Nav -->
 <div class="secondary-nav">
-  <a href="#">Travel</a>
-  <a href="#">Environment News</a>
-  <a href="#">Business</a>
-  <a href="#">Science Discoveries</a>
-  <a href="#">Health Insights</a>
-  <a href="#">Technology</a>
-  <a href="#">Education</a>
-  <a href="#">Political Analysis</a>
-  <a href="#">International</a>
+  <a href="test.html">Travel</a>
+  <a href="new.html">Business</a>
+  <a href="test.html">Education</a>
+  <a href="new.html">Political Analysis</a>
+  <a href="test.html">International</a>
 </div>
   <div class="max-w-7xl mx-auto py-12 px-4">
     
@@ -859,4 +855,10 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   
   </footer>
 </body>
+<script>const signInBtn = document.querySelector('.sign-in');
+
+  signInBtn.addEventListener('click', () => {
+    window.location.href = 'signin.html';
+  });
+  </script>
 </html>
