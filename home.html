@@ -2156,7 +2156,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   <nav class="main-nav">
     <ul>
       <li>
-        <a href="index.html">HOME</a>
+        <a href="#">HOME</a>
         
       </li>
      
@@ -2164,24 +2164,24 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       <li>
         <a href="#">BREAKING NEWS </a>
         <ul>
-          <li><a href="#">Headlines</a></li>
-          <li><a href="#">Article</a></li>
+          <li><a href="breaking.html">Headlines</a></li>
+          <li><a href="breaking.html">Article</a></li>
         </ul>
       </li>
       <li>
         <a href="#">SUBSCRIPTION</a>
         <ul>
-          <li><a href="#">Wekkly Updates</a></li>
-          <li><a href="#">Monthly NewsLetter</a></li>
-          <li><a href="#">Special Announcement</a></li>
+          <li><a href="signin.html">Wekkly Updates</a></li>
+          <li><a href="signin.html">Monthly NewsLetter</a></li>
+          <li><a href="signin.html">Special Announcement</a></li>
         </ul>
       </li>
       <li>
         <a href="#">PAGES</a>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Contact</a></li>
+          <li><a href="signin.html">Login</a></li>
           
         </ul>
       </li>
@@ -2203,15 +2203,11 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 
 <!-- Bottom Nav -->
 <div class="secondary-nav">
-  <a href="travel.html">Travel</a>
-  <a href="#">Environment News</a>
-  <a href="#">Business</a>
-  <a href="#">Science Discoveries</a>
-  <a href="#">Health Insights</a>
-  <a href="#">Technology</a>
-  <a href="#">Education</a>
-  <a href="#">Political Analysis</a>
-  <a href="#">International</a>
+  <a href="test.html">Travel</a>
+  <a href="new.html">Business</a>
+  <a href="test.html">Education</a>
+  <a href="new.html">Political Analysis</a>
+  <a href="test.html">International</a>
 </div>
 
 <div class="container">
@@ -3025,6 +3021,12 @@ const hamburger = document.querySelector('.hamburger');
         }
         
         setInterval(showNextItem, 3000); // Change every 3 seconds
+        const signInBtn = document.querySelector('.sign-in');
+
+signInBtn.addEventListener('click', () => {
+  window.location.href = 'signin.html';
+});
+
 </script>
 
 </body>
