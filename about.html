@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="about.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body class="bg-white text-black font-serif">
+  
+    <!-- Top Header -->
+    <div class="top-header">
+      <div class="left-section">
+        <div class="hamburger">☰</div>
+        <div class="logo">
+          <img src="logo-stackly (1).png" alt="logo">
+         
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="home.html">HOME</a>
+            
+          </li>
+         
+         
+          <li>
+            <a href="#">BREAKING NEWS </a>
+            <ul>
+              <li><a href="#">Headlines</a></li>
+              <li><a href="breaking.html    ">Alerts</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">SUBSCRIPTION</a>
+            <ul>
+              <li><a href="signin.html">Wekkly Updates</a></li>
+              <li><a href="signin.html">Monthly NewsLetter</a></li>
+              <li><a href="signin.html">Special Announcement</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">PAGES</a>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signin.html">Register</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="right-section">
+        <!-- Bookmark Icon -->
+        <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">🔖</div>
+    
+        <!-- Dark Mode / Light Mode Toggle -->
+        <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+    
+        <!-- Search Icon -->
+        <div class="icon" id="search-icon" onclick="toggleSearch()">🔍</div>
+    
+        <button class="sign-in">SIGN IN</button>
+      </div>
+    </div>
+    
+    <!-- Bottom Nav -->
+    <div class="secondary-nav">
+      <a href="test.html">Travel</a>
+      <a href="new.html">Business</a>
+      
+      <a href="test.html">Education</a>
+      <a href="new.html">Political Analysis</a>
+      <a href="test.html">International</a>
+    </div>
+  <section class="about-section">
+    <h1 class="about-title">About Us</h1>
+
+    <div class="about-container">
+
+      <div class="about-images">
+        
+        <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/06/2.webp" alt="Happy team" class="second-image">
+      </div>
+
+      <div class="about-content">
+        <h5>About Us</h5>
+        <h2>The Car Industry’s Chip Shortage is Far From Over</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Suspendisse nulla aliquam. Risus rutrum any tellus eget ultrices pretium nisi amet facilisis egestas cursus vivamus. Lorem ipsum is dolor sit amet consectetur. Suspendisse nulla aliquam. Risus rutrum tellus eget ultrices pretium nisi amet facilisis egestas cursus vivamus. Lorem ipsum dol amet consectetur. Suspendisse nulla aliquam. Risus rutrum tellus eget ultrices pretium nisi amet facilisis egestas cursus any the more vivamus.</p>
+        <a href="#" class="about-button">Show More</a>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="team-section">
+    <h5>Our Team</h5>
+    <h2>Meet Our Best Team</h2>
+  
+    <div class="team-cards">
+  
+      <div class="team-card">
+        <img src="https://byteflows.net/wp/forcast-main/wp/wp-content/uploads/2024/06/team-3.webp" alt="David Martiny">
+        <div class="card-content">
+          <h3>David Martiny</h3>
+          <p>Creative Director</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="team-card">
+        <img src="https://byteflows.net/wp/forcast-main/wp/wp-content/uploads/2024/06/team-2.webp" alt="Kylie Alessia">
+        <div class="card-content">
+          <h3>Kylie Alessia</h3>
+          <p>Manager</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="team-card">
+        <img src="https://byteflows.net/wp/forcast-main/wp/wp-content/uploads/2024/06/team-1.webp" alt="Jack Martin">
+        <div class="card-content">
+          <h3>Jack Martin</h3>
+          <p>Developer</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+</body>
+<script>const signInBtn = document.querySelector('.sign-in');
+
+    signInBtn.addEventListener('click', () => {
+      window.location.href = 'signin.html';
+    });
+    </script>
+</html>
+<style>
+ .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 26px;
+    }
+    .logo img {
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    /* Navigation Styles */
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    .main-nav li {
+      position: relative;
+    }
+    .main-nav > ul > li > a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      display: block;
+    }
+    .main-nav > ul > li > a:hover {
+      background-color: #d60000;
+      color: #fff;
+    }
+
+    /* Dropdown */
+    .main-nav li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 0;
+      list-style: none;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    .main-nav li:hover ul {
+      display: block;
+    }
+    .main-nav li ul li a {
+      padding: 10px 15px;
+      display: block;
+      color: #000;
+      background-color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .main-nav li ul li a:hover {
+      background-color: #eee;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .right-section .icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .sign-in {
+      background: #d60000;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Secondary Nav */
+    .secondary-nav {
+      background: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    .secondary-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 12px;
+      border-right: 1px solid #444;
+    }
+    .secondary-nav a:last-child {
+      border-right: none;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    /* Responsive Styles */
+
+/* General Mobile Styles  for nav*/
+@media (max-width: 920px) {
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+  .left-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    display: none; /* Hide menu by default */
+  }
+  .main-nav.active ul {
+    display: flex;
+  }
+  .main-nav li {
+    width: 100%;
+    text-align: left;
+  }
+  .main-nav > ul > li > a {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+  }
+  .main-nav li ul {
+    position: static;
+    box-shadow: none;
+  }
+  .right-section {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Tablet and Medium Screens */
+@media (max-width: 1366px) and (min-width: 921px) {
+  .main-nav ul {
+    gap: 15px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+}
+
+/* Smaller Tablets and iPads */
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    padding: 8px 10px;
+  }
+  .left-section, .right-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  .main-nav.active ul {
+    display: flex;
+  }
+  .secondary-nav {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+  .sign-in {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .main-nav > ul > li > a {
+    font-size: 14px;
+  }
+  .right-section {
+    gap: 10px;
+  }
+}
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+  }
+  
+  .about-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .about-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .about-images {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .about-images img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .about-images .second-image {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  .about-content h5 {
+    color: crimson;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .about-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .about-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: crimson;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  .about-button:hover {
+    background: darkred;
+  }
+  
+  /* Mobile view responsiveness */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-images {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .about-images .second-image {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-button {
+      padding: 12px 20px;
+    }
+  }
+  .team-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.team-section h5 {
+  color: crimson;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  max-width: 300px;
+  flex: 1 1 300px;
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.card-content p {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: crimson;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .team-section h2 {
+    font-size: 2rem;
+  }
+}
+
+  </style>
