@@ -616,6 +616,75 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
     margin-right: 6px;
   }
 }
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+.home li {
+  display: inline-block;
+}
+
+.home a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 16px;
+  background-color:   #d60000;
+  ;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home a:hover {
+  background-color: #d60000;
+  color: white;
+}
+/* Hide on screens wider than 920px (desktop) */
+@media (min-width: 921px) {
+  .home {
+    display: none;
+  }
+}
+
+/* Show on screens 920px or less (tablet/mobile) */
+@media (max-width: 920px) {
+  .home {
+    display: block;
+  }
+}
+.home li {
+  display: inline-block;
+}
+
+.home a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 16px;
+  background-color:   #d60000;
+  ;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home a:hover {
+  background-color: #d60000;
+  color: white;
+}
+/* Hide on screens wider than 920px (desktop) */
+@media (min-width: 921px) {
+  .home {
+    display: none;
+  }
+}
+
+/* Show on screens 920px or less (tablet/mobile) */
+@media (max-width: 920px) {
+  .home {
+    display: block;
+  }
+}
   </style>
 </head>
 <body class="bg-white text-black font-serif">
@@ -623,7 +692,9 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 <!-- Top Header -->
 <div class="top-header">
   <div class="left-section">
-    <div class="hamburger">☰</div>
+    <ul class="home">
+        <li><a href="index.html">Home</a></li>
+      </ul>
     <div class="logo">
       <img src="logo-stackly (1).png" alt="logo">
      
@@ -640,7 +711,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       <li>
         <a href="#">BREAKING NEWS </a>
         <ul>
-          <li><a href="#">Headlines</a></li>
+          <li><a href="breaking.html">Headlines</a></li>
           <li><a href="breaking.html    ">Alerts</a></li>
         </ul>
       </li>
@@ -655,23 +726,17 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       <li>
         <a href="#">PAGES</a>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signin.html">Register</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Contact</a></li>
+          <li><a href="signin.html">Login</a></li>
+         
         </ul>
       </li>
     </ul>
   </nav>
   <div class="right-section">
     <!-- Bookmark Icon -->
-    <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">🔖</div>
-
-    <!-- Dark Mode / Light Mode Toggle -->
-    <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
-
-    <!-- Search Icon -->
-    <div class="icon" id="search-icon" onclick="toggleSearch()">🔍</div>
+    
 
     <button class="sign-in">SIGN IN</button>
   </div>
@@ -779,7 +844,6 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   
   
  
-
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-section about">
@@ -788,33 +852,41 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
         <p><strong>Email Us:</strong> info@gmail.com</p>
         <p><strong>Contact:</strong> 784-8894-678</p>
         <div class="social-icons">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-pinterest"></i>
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.facebook.com/people/Stackly/pfbid02Ndinga9bDhksYhUtFKXkiLaYi8PHtgF11FxSvs1i1euTHLxwndPfDVUvJ3NsLJmjl/?rdid=eKFuC8OU12X0WTT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/The_Stackly" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/the_stackly?igsh=cGNsOWlwenh2enpz" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/the-stackly/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
+        
       </div>
   
       <div class="footer-section links">
         <h3>Quick Link</h3>
         <ul>
-          <li>Our Authors</li>
-          <li>My Account</li>
+          <li>About Us</li>
+          <li>Headlines</li>
           <li>Bookmarks</li>
-          <li>FAQ</li>
-          <li>Contact Us</li>
+          
+          <li>Contact</li>
         </ul>
       </div>
   
       <div class="footer-section categories">
         <h3>Top Categories</h3>
         <ul>
-          <li>Computers</li>
-          <li>Robotics</li>
-          <li>Mobile</li>
-          <li>Technology</li>
-          <li>Accessories</li>
+          <li>Travel</li>
+          <li>Bussiness</li>
+          <li>Education</li>
+          <li>Political Analysis</li>
+          <li>International</li>
         </ul>
       </div>
   
@@ -842,11 +914,11 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
         <div class="logo"><img src="logo-stackly (1).png" alt="">
       </div>
       <nav class="footer-nav">
-        <a href="index">HOME</a>
-        <a href="#">FEATURES</a>
-        <a href="#">CATEGORIES</a>
-        <a href="#">DESIGN</a>
-        <a href="#">CONTACT</a>
+        <a href="index.html">HOME</a>
+        <a href="breaking.html">BREAKING NEWS</a>
+        <a href="about.html">ABOUT US</a>
+        
+        <a href="login.html">CONTACT</a>
       </nav>
       <div class="scroll-top">
         <button><i class="fas fa-chevron-up"></i></button>
