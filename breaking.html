@@ -11,7 +11,9 @@
     <!-- Top Header -->
     <div class="top-header">
       <div class="left-section">
-        <div class="hamburger">☰</div>
+        <ul class="home">
+            <li><a href="index.html">Home</a></li>
+          </ul>
         <div class="logo">
           <img src="logo-stackly (1).png" alt="logo">
          
@@ -28,7 +30,7 @@
           <li>
             <a href="#">BREAKING NEWS </a>
             <ul>
-              <li><a href="#">Headlines</a></li>
+              <li><a href="breaking.html">Headlines</a></li>
               <li><a href="breaking.html    ">Alerts</a></li>
             </ul>
           </li>
@@ -43,23 +45,16 @@
           <li>
             <a href="#">PAGES</a>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signin.html">Register</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="login.html">Contact</a></li>
+              <li><a href="signin.html">Login</a></li>
+             
             </ul>
           </li>
         </ul>
       </nav>
       <div class="right-section">
-        <!-- Bookmark Icon -->
-        <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">🔖</div>
-    
-        <!-- Dark Mode / Light Mode Toggle -->
-        <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
-    
-        <!-- Search Icon -->
-        <div class="icon" id="search-icon" onclick="toggleSearch()">🔍</div>
+        
     
         <button class="sign-in">SIGN IN</button>
       </div>
@@ -237,6 +232,11 @@
     </script>
 </html>
 <style>
+    @media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
  .top-header {
       display: flex;
       justify-content: space-between;
@@ -957,5 +957,36 @@ aside.sidebar {
   }
 }
 
+.home li {
+  display: inline-block;
+}
 
+.home a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 16px;
+  background-color:   #d60000;
+  ;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home a:hover {
+  background-color: #d60000;
+  color: white;
+}
+/* Hide on screens wider than 920px (desktop) */
+@media (min-width: 921px) {
+  .home {
+    display: none;
+  }
+}
+
+/* Show on screens 920px or less (tablet/mobile) */
+@media (max-width: 920px) {
+  .home {
+    display: block;
+  }
+}
   </style>
