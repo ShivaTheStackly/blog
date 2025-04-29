@@ -13,7 +13,9 @@
     <!-- Top Header -->
     <div class="top-header">
       <div class="left-section">
-        <div class="hamburger">☰</div>
+        <ul class="home">
+            <li><a href="index.html">Home</a></li>
+          </ul>
         <div class="logo">
           <img src="logo-stackly (1).png" alt="logo">
          
@@ -30,7 +32,7 @@
           <li>
             <a href="#">BREAKING NEWS </a>
             <ul>
-              <li><a href="#">Headlines</a></li>
+              <li><a href="breaking.html">Headlines</a></li>
               <li><a href="breaking.html    ">Alerts</a></li>
             </ul>
           </li>
@@ -45,23 +47,17 @@
           <li>
             <a href="#">PAGES</a>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signin.html">Register</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="login.html">Contact</a></li>
+              <li><a href="signin.html">Login</a></li>
+           
             </ul>
           </li>
         </ul>
       </nav>
       <div class="right-section">
         <!-- Bookmark Icon -->
-        <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">🔖</div>
-    
-        <!-- Dark Mode / Light Mode Toggle -->
-        <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
-    
-        <!-- Search Icon -->
-        <div class="icon" id="search-icon" onclick="toggleSearch()">🔍</div>
+       
     
         <button class="sign-in">SIGN IN</button>
       </div>
@@ -108,10 +104,10 @@
           <h3>David Martiny</h3>
           <p>Creative Director</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/people/Stackly/pfbid02Ndinga9bDhksYhUtFKXkiLaYi8PHtgF11FxSvs1i1euTHLxwndPfDVUvJ3NsLJmjl/?rdid=eKFuC8OU12X0WTT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/The_Stackly"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/the_stackly?igsh=cGNsOWlwenh2enpz"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/the-stackly/"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -122,10 +118,10 @@
           <h3>Kylie Alessia</h3>
           <p>Manager</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/people/Stackly/pfbid02Ndinga9bDhksYhUtFKXkiLaYi8PHtgF11FxSvs1i1euTHLxwndPfDVUvJ3NsLJmjl/?rdid=eKFuC8OU12X0WTT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/The_Stackly"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/the_stackly?igsh=cGNsOWlwenh2enpz"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/the-stackly/"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -136,10 +132,10 @@
           <h3>Jack Martin</h3>
           <p>Developer</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/people/Stackly/pfbid02Ndinga9bDhksYhUtFKXkiLaYi8PHtgF11FxSvs1i1euTHLxwndPfDVUvJ3NsLJmjl/?rdid=eKFuC8OU12X0WTT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/The_Stackly"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/the_stackly?igsh=cGNsOWlwenh2enpz"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/the-stackly/"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -156,6 +152,11 @@
     </script>
 </html>
 <style>
+    @media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
  .top-header {
       display: flex;
       justify-content: space-between;
@@ -578,5 +579,36 @@ body {
     font-size: 2rem;
   }
 }
+.home li {
+  display: inline-block;
+}
 
+.home a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 16px;
+  background-color:   #d60000;
+  ;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home a:hover {
+  background-color: #d60000;
+  color: white;
+}
+/* Hide on screens wider than 920px (desktop) */
+@media (min-width: 921px) {
+  .home {
+    display: none;
+  }
+}
+
+/* Show on screens 920px or less (tablet/mobile) */
+@media (max-width: 920px) {
+  .home {
+    display: block;
+  }
+}
   </style>
