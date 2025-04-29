@@ -2140,6 +2140,435 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
         font-size: 14px; /* Smaller text for better readability on mobile */
     }
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Optional: Specific container styles for dark mode */
+.dark-mode .sidebar {
+  background-color: #000;
+  color: white;
+}
+
+/* Optional: Icon style */
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: color 0.3s;
+}
+/* In dark mode, card backgrounds turn black */
+body.dark-mode .card {
+  background-color: #000; /* pure black */
+  color: white;
+  border: 1px solid #333; /* optional border to separate cards */
+}
+
+/* In dark mode, make tag and date readable */
+body.dark-mode .tag {
+  color: white;
+  background-color: #444; /* optional dark background for tags */
+}
+
+body.dark-mode .date {
+  color: #ccc; /* light grey for dates */
+}
+/* In dark mode, main article background and text */
+body.dark-mode .main-article {
+  background-color: #000;
+  color: white;
+  padding: 20px; /* optional: add padding if needed */
+  border: 1px solid #333; /* optional: add subtle border */
+}
+
+/* In dark mode, tags inside main article */
+body.dark-mode .main-article .tag {
+  background-color: #444;
+  color: white;
+}
+
+/* In dark mode, meta info (author and date) */
+body.dark-mode .main-article .meta span {
+  color: #ccc;
+}
+/* Dark mode styling for side articles */
+body.dark-mode .side-article {
+  background-color: #000;
+  color: white;
+  border: 1px solid #333; /* optional */
+  padding: 10px;
+}
+
+/* Title inside side-article */
+body.dark-mode .side-article h4 {
+  color: white;
+}
+
+/* Date inside side-article */
+body.dark-mode .side-article span {
+  color: #ccc;
+}
+/* Dark mode for this specific content block */
+body.dark-mode .text {
+  background-color: #000;
+  color: white;
+}
+
+/* Headings and paragraph inside */
+body.dark-mode .text h3,
+body.dark-mode .text p {
+  color: white;
+}
+
+/* Category badge */
+body.dark-mode .text .category {
+  background-color: #444;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+/* Date */
+body.dark-mode .text .date {
+  color: #ccc;
+}
+
+body.dark-mode article {
+    background-color: #1e1e1e; /* Dark background for the article */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Image styling */
+  body.dark-mode article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Heading styling */
+  body.dark-mode article h4 {
+    color: white; /* White text for heading */
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+
+  /* Date styling */
+  body.dark-mode article .date {
+    color: #ccc; /* Light gray color for date */
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  /* Dark Mode Text and Background Inversion */
+body.dark-mode .blog-card {
+  background-color: #121212; /* Dark background for the card */
+  color: white; /* Default text color for dark mode */
+}
+
+/* Card Content */
+body.dark-mode .blog-card .card-content h3 {
+  color: white; /* White text color for the heading */
+}
+
+body.dark-mode .blog-card .card-footer {
+  color: #ccc; /* Lighter color for footer text */
+}
+
+/* Date */
+body.dark-mode .blog-card .card-footer div {
+  color: #ccc; /* Light gray text color for the date */
+}
+
+/* Tag Icon (Bookmark) */
+body.dark-mode .blog-card .card-footer span {
+  color: #ccc; /* Lighter gray color for the tag icon */
+}
+
+/* Light Mode - Inverse styles */
+body:not(.dark-mode) .blog-card {
+  background-color: white; /* Light background for the card */
+  color: black; /* Default text color for light mode */
+}
+
+body:not(.dark-mode) .blog-card .card-content h3 {
+  color: black; /* Black text color for the heading */
+}
+
+body:not(.dark-mode) .blog-card .card-footer {
+  color: #333; /* Darker color for footer text */
+}
+
+/* Date */
+body:not(.dark-mode) .blog-card .card-footer div {
+  color: #555; /* Dark gray text color for the date */
+}
+
+/* Tag Icon (Bookmark) */
+body:not(.dark-mode) .blog-card .card-footer span {
+  color: #555; /* Darker gray color for the tag icon */
+}
+/* Dark Mode Text and Background Inversion for Sidebar */
+body.dark-mode .sideba {
+  background-color: #121212; /* Dark background for the sidebar */
+  color: white; /* Default text color for dark mode */
+}
+
+/* Sidebar Heading */
+body.dark-mode .sideba h2 {
+  color: white; /* White text color for the heading */
+}
+
+/* Popular Item */
+body.dark-mode .sideba .popular-item {
+  background-color: #1a1a1a; /* Darker background for the popular items */
+  color: white; /* White text for the popular item text */
+  margin-bottom: 20px; /* Space between items */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Popular Item Title */
+body.dark-mode .sideba .popular-item h4 {
+  color: white; /* White text for the title */
+}
+
+/* Popular Item Date */
+body.dark-mode .sideba .popular-item span {
+  color: #ccc; /* Lighter gray for the date */
+}
+
+/* Bookmark Icon */
+body.dark-mode .sideba .popular-item i {
+  color: #ccc; /* Lighter gray for the bookmark icon */
+}
+
+/* Light Mode - Inverse styles */
+body:not(.dark-mode) .sideba {
+  background-color: white; /* Light background for the sidebar */
+  color: black; /* Default text color for light mode */
+}
+
+/* Sidebar Heading */
+body:not(.dark-mode) .sideba h2 {
+  color: black; /* Black text color for the heading */
+}
+
+/* Popular Item */
+body:not(.dark-mode) .sideba .popular-item {
+  background-color: #f9f9f9; /* Light background for the popular items */
+  color: black; /* Black text for the popular item text */
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Popular Item Title */
+body:not(.dark-mode) .sideba .popular-item h4 {
+  color: black; /* Black text for the title */
+}
+
+/* Popular Item Date */
+body:not(.dark-mode) .sideba .popular-item span {
+  color: #666; /* Dark gray for the date */
+}
+
+/* Bookmark Icon */
+body:not(.dark-mode) .sideba .popular-item i {
+  color: #666; /* Darker gray for the bookmark icon */
+}
+/* Dark Mode Text and Background Inversion for Social Follow */
+body.dark-mode .social-follow {
+  background-color: #121212; /* Dark background */
+  color: white; /* White text for the dark mode */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Social Follow Heading */
+body.dark-mode .social-follow h2 {
+  color: white; /* White text for the heading */
+}
+
+body.dark-mode .social-follow h2 span {
+  color: #fcfbfa; /* Highlight color for the span */
+}
+
+/* Social Follow Paragraph */
+body.dark-mode .social-follow p {
+  color: #ccc; /* Lighter gray text for the paragraph */
+}
+
+/* Social Grid */
+body.dark-mode .social-follow .social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Social Card */
+body.dark-mode .social-follow .social-card {
+  background-color: #1a1a1a; /* Dark background for the social card */
+  color: white; /* White text */
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1 1 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Social Card Icon */
+body.dark-mode .social-follow .social-card i {
+  font-size: 30px;
+  color: #ffcc00; /* Icon color */
+}
+
+/* Social Card Text */
+body.dark-mode .social-follow .social-card h4 {
+  color: white; /* White text for the heading */
+}
+
+body.dark-mode .social-follow .social-card span {
+  color: #ccc; /* Light gray for the span */
+}
+
+/* Light Mode - Inverse styles */
+body:not(.dark-mode) .social-follow {
+  background-color: white; /* Light background */
+  color: black; /* Black text for light mode */
+}
+
+/* Social Follow Heading */
+body:not(.dark-mode) .social-follow h2 {
+  color: black; /* Black text for the heading */
+}
+
+body:not(.dark-mode) .social-follow h2 span {
+  color: #ff6600; /* Highlight color for the span */
+}
+
+/* Social Follow Paragraph */
+body:not(.dark-mode) .social-follow p {
+  color: #666; /* Dark gray text for the paragraph */
+}
+
+/* Social Card */
+body:not(.dark-mode) .social-follow .social-card {
+  background-color: #f9f9f9; /* Light background for the social card */
+  color: black; /* Black text */
+}
+
+/* Social Card Icon */
+body:not(.dark-mode) .social-follow .social-card i {
+  color: #ff6600; /* Icon color */
+}
+
+/* Social Card Text */
+body:not(.dark-mode) .social-follow .social-card h4 {
+  color: black; /* Black text for the heading */
+}
+
+body:not(.dark-mode) .social-follow .social-card span {
+  color: #666; /* Dark gray for the span */
+}
+body.dark-mode .contain {
+  background-color: #2e2e2e; /* Dark background for the entire container */
+}
+body.dark-mode .top-stories .header h2 {
+  color: white; /* White text for header in dark mode */
+}
+
+body.dark-mode .story {
+  background-color: #333; /* Dark background for each story in dark mode */
+  color: white; /* White text */
+}
+
+body.dark-mode .story .tag {
+  background-color: #ffcc00; /* Yellow tag in dark mode */
+}
+
+body.dark-mode .story h3 {
+  color: white; /* White text for story title */
+}
+
+body.dark-mode .story .metaa {
+  color: #bbb; /* Lighter text for meta info in dark mode */
+}
+
+body.dark-mode .story .metaa i {
+  color: #ffcc00; /* Yellow icon for meta info in dark mode */
+}
+
+/* Light Mode Styles */
+body:not(.dark-mode) .top-stories .header h2 {
+  color: #333; /* Dark text for header in light mode */
+}
+
+body:not(.dark-mode) .story {
+  background-color: #fff; /* White background for each story in light mode */
+  color: #333; /* Dark text */
+}
+
+body:not(.dark-mode) .story .tag {
+  background-color: #ff6600; /* Orange tag in light mode */
+}
+
+body:not(.dark-mode) .story h3 {
+  color: #333; /* Dark text for story title in light mode */
+}
+
+body:not(.dark-mode) .story .metaa {
+  color: #666; /* Dark gray text for meta info in light mode */
+}
+
+body:not(.dark-mode) .story .metaa i {
+  color: #ff6600; /* Orange icon for meta info in light mode */
+}
+body.dark-mode .header {
+  background-color: #333; /* Dark background for dark mode */
+}
+
+body.dark-mode .header h2 {
+  color: white; /* White text in dark mode */
+}
+
+/* Light Mode Styles */
+body:not(.dark-mode) .header {
+  background-color: #fff; /* White background for light mode */
+}
+
+body:not(.dark-mode) .header h2 {
+  color: #333; /* Dark text in light mode */
+}
+body.dark-mode .tab-button {
+  background-color: #444; /* Dark background for dark mode */
+  color: #fff; /* White text for dark mode */
+  border: 1px solid #666;
+}
+
+body.dark-mode .tab-button:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+body.dark-mode .tab-button.active {
+   /* Active tab color for dark mode */
+  color: white; /* Active tab text color in dark mode */
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Example for logo */
+.logo img {
+  width: 100px;
+  margin-left: 20px;
+}
   </style>
 </head>
 <body>
@@ -2189,13 +2618,18 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   </nav>
   <div class="right-section">
     <!-- Bookmark Icon -->
-    <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">🔖</div>
+   <!-- Bookmark Icon -->
+<div class="icon" id="bookmark-icon" onclick="bookmarkPage()">
+  <i class="fa-regular fa-bookmark"></i>
+</div>
 
-    <!-- Dark Mode / Light Mode Toggle -->
-    <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+<!-- Dark Mode / Light Mode Toggle -->
+<div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">
+  <i class="fa-solid fa-moon"></i>
+</div>
 
-    <!-- Search Icon -->
-    <div class="icon" id="search-icon" onclick="toggleSearch()">🔍</div>
+
+
 
     <button class="sign-in">SIGN IN</button>
   </div>
@@ -2868,33 +3302,41 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       <p><strong>Email Us:</strong> info@gmail.com</p>
       <p><strong>Contact:</strong> 784-8894-678</p>
       <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-pinterest"></i>
-        <i class="fab fa-youtube"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin-in"></i>
+        <a href="https://www.facebook.com/people/Stackly/pfbid02Ndinga9bDhksYhUtFKXkiLaYi8PHtgF11FxSvs1i1euTHLxwndPfDVUvJ3NsLJmjl/?rdid=eKFuC8OU12X0WTT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/The_Stackly" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/the_stackly?igsh=cGNsOWlwenh2enpz" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/the-stackly/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
+      
     </div>
 
     <div class="footer-section links">
       <h3>Quick Link</h3>
       <ul>
-        <li>Our Authors</li>
-        <li>My Account</li>
+        <li>About Us</li>
+        <li>Headlines</li>
         <li>Bookmarks</li>
-        <li>FAQ</li>
-        <li>Contact Us</li>
+        
+        <li>Contact</li>
       </ul>
     </div>
 
     <div class="footer-section categories">
       <h3>Top Categories</h3>
       <ul>
-        <li>Computers</li>
-        <li>Robotics</li>
-        <li>Mobile</li>
-        <li>Technology</li>
-        <li>Accessories</li>
+        <li>Travel</li>
+        <li>Bussiness</li>
+        <li>Education</li>
+        <li>Political Analysis</li>
+        <li>International</li>
       </ul>
     </div>
 
@@ -2922,11 +3364,11 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
       <div class="logo"><img src="logo-stackly (1).png" alt="">
     </div>
     <nav class="footer-nav">
-      <a href="#">HOME</a>
-      <a href="#">FEATURES</a>
-      <a href="#">CATEGORIES</a>
-      <a href="#">DESIGN</a>
-      <a href="#">CONTACT</a>
+      <a href="index.html">HOME</a>
+      <a href="breaking.html">BREAKING NEWS</a>
+      <a href="about.html">ABOUT US</a>
+      
+      <a href="login.html">CONTACT</a>
     </nav>
     <div class="scroll-top">
       <button><i class="fas fa-chevron-up"></i></button>
@@ -2949,14 +3391,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
     icon.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙'; // Change icon to light mode when dark mode is active
   }
 
-  // Toggle search bar (simple example)
-  function toggleSearch() {
-    const searchInput = document.createElement('input');
-    searchInput.type = 'text';
-    searchInput.placeholder = 'Search...';
-    document.body.appendChild(searchInput);
-    searchInput.focus();
-  }
+  
   function showTab(tabId) {
       // Hide all tabs
       document.querySelectorAll('.tab-content').forEach(tab => {
@@ -3026,6 +3461,21 @@ const hamburger = document.querySelector('.hamburger');
 signInBtn.addEventListener('click', () => {
   window.location.href = 'signin.html';
 });
+function toggleDarkMode() {
+  const body = document.body;
+  const icon = document.getElementById('dark-mode-icon');
+
+  body.classList.toggle('dark-mode');
+
+  // Change icon based on mode
+  if (body.classList.contains('dark-mode')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+}
 
 </script>
 
