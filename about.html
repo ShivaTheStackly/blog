@@ -6,6 +6,8 @@
   <title>About Us</title>
   <link rel="stylesheet" href="about.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 <body class="bg-white text-black font-serif">
@@ -85,12 +87,80 @@
       <div class="about-content">
         <h5>About Us</h5>
         <h2>The Car Industry’s Chip Shortage is Far From Over</h2>
-        <p>Lorem ipsum dolor sit amet consectetur. Suspendisse nulla aliquam. Risus rutrum any tellus eget ultrices pretium nisi amet facilisis egestas cursus vivamus. Lorem ipsum is dolor sit amet consectetur. Suspendisse nulla aliquam. Risus rutrum tellus eget ultrices pretium nisi amet facilisis egestas cursus vivamus. Lorem ipsum dol amet consectetur. Suspendisse nulla aliquam. Risus rutrum tellus eget ultrices pretium nisi amet facilisis egestas cursus any the more vivamus.</p>
-        <a href="#" class="about-button">Show More</a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Suspendisse nulla aliquam.
+          Risus rutrum any tellus eget ultrices pretium nisi amet facilisis
+          egestas cursus vivamus …
+        </p>
+      
+        <!-- trigger -->
+        <a href="#" id="showMoreBtn" class="about-button">Show More</a>
       </div>
+      
+      <!-- ===== Modal (hidden by default) ===== -->
+      <div id="aboutModal" class="modal">
+        <div class="modal-dialog">
+          <button class="close-btn" aria-label="Close">&times;</button>
+      
+          <h3>More About The Chip Shortage</h3>
+          <p>
+            Worldwide semiconductor supply issues began in 2020 and continue to
+            slow vehicle production. Foundries are running at maximum capacity,
+            yet demand for advanced driver‑assistance systems, EV power modules
+            and infotainment chips keeps climbing.  
+            Analysts expect supply to stay tight through 2025 as new fabs come
+            online and automakers secure long‑term wafer contracts.
+          </p>
+      
+          <p>
+            Manufacturers are re‑engineering control units to reduce the total
+            chip count, prioritising high‑margin models and exploring
+            software‑defined architectures to mitigate future shocks.
+          </p>
+        </div>
+      </div>
+      
 
     </div>
-
+    <section class="skills-section">
+      <div class="container">
+        <div class="content">
+          <div class="left">
+            <div class="video-wrapper">
+              <img src="https://byteflows.net/wp/forcast-main/wp/wp-content/uploads/2024/06/vieo.webp" alt="Team Working">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="play-button">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="right">
+            <h4 class="subheading">Our Skill</h4>
+            <h2>We have Develop & Create <br> Digital Post Future it done!</h2>
+            <p>
+              Sed ut perspiciatis unde omnis iste error sit voluptatem accusantium doloremque the laudantium, totam rem aperiam,
+              the eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo ipsam
+              voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+    
+            <div class="skill">
+              <label>Development</label>
+              <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+            </div>
+            <div class="skill">
+              <label>Success</label>
+              <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill">
+              <label>Finished Projects</label>
+              <div class="bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
   </section>
   <section class="team-section">
     <h5>Our Team</h5>
@@ -144,7 +214,31 @@
   </section>
   
 </body>
-<script>const signInBtn = document.querySelector('.sign-in');
+<script>
+  const modal      = document.getElementById('aboutModal');
+  const openBtn    = document.getElementById('showMoreBtn');
+  const closeBtn   = modal.querySelector('.close-btn');
+
+  // open
+  openBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.classList.add('show');
+  });
+
+  // close (X button)
+  closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+
+  // close when clicking outside the dialog
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.remove('show');
+  });
+
+  // close on Esc key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') modal.classList.remove('show');
+  });
+
+const signInBtn = document.querySelector('.sign-in');
 
     signInBtn.addEventListener('click', () => {
       window.location.href = 'signin.html';
@@ -157,6 +251,73 @@
     display: none;
   }
 }
+/* ---------- Trigger button (optional, reuse your own) ---------- */
+.about-button {
+  display:inline-block; padding:10px 25px; background:#d60000; color:#fff;
+  text-decoration:none; border-radius:4px; transition:background .25s;
+}
+.about-button:hover { background:#a80000; }
+
+/* ---------- Modal wrapper ---------- */
+.modal {
+  position:fixed; inset:0;           /* top/right/bottom/left:0 */
+  background:rgba(0,0,0,.6);
+  display:flex; align-items:center; justify-content:center;
+  visibility:hidden; opacity:0; transition:opacity .3s ease;
+  z-index:1000;
+}
+
+/* ---------- Modal dialog ---------- */
+.modal-dialog {
+  max-width:600px; width:90%;
+  background:#fff; color:#333;
+  border-radius:8px; padding:30px 25px;
+  box-shadow:0 10px 40px rgba(0,0,0,.35);
+  transform:translateY(-40px);
+  transition:transform .3s ease;
+  position:relative;
+}
+
+/* Close button (X) */
+.close-btn{
+  position:absolute; top:12px; right:15px;
+  font-size:26px; line-height:1; background:none; border:none;
+  cursor:pointer; color:#999; transition:color .2s;
+}
+.close-btn:hover{color:#000;}
+
+/* ---------- Visible state ---------- */
+.modal.show {visibility:visible; opacity:1;}
+.modal.show .modal-dialog {transform:translateY(0);}
+@media (max-width: 600px) {
+  .modal-dialog {
+    width: 90%;
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+
+  .modal-dialog h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .modal-dialog p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .close-btn {
+    top: 8px;
+    right: 10px;
+    font-size: 22px;
+  }
+
+  .about-button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
  .top-header {
       display: flex;
       justify-content: space-between;
@@ -400,7 +561,7 @@ body {
   }
   
   .about-section {
-    padding: 50px 20px;
+    padding: 0px 20px;
     max-width: 1200px;
     margin: auto;
   }
@@ -611,4 +772,124 @@ body {
     display: block;
   }
 }
+.skills-section {
+  padding: 50px 20px;
+ margin-top: 70px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.left, .right {
+  flex: 1 1 500px;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.video-wrapper img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button i {
+  color: #d60000;
+  font-size: 24px;
+}
+
+.right h4.subheading {
+  color: #d60000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.right h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.right p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  background: #d60000;
+  height: 100%;
+  width: 0;
+  animation: fillBar 2s ease forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: 100%; } /* Actual percentage is set inline */
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .right h2 {
+    font-size: 24px;
+  }
+
+  .play-button {
+    padding: 15px;
+  }
+
+  .play-button i {
+    font-size: 18px;
+  }
+}
+
+
   </style>
