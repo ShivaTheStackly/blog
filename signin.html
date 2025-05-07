@@ -45,12 +45,13 @@
 
 <script src="auth.js"></script>
 </body>
-<script>const loginForm = document.getElementById('login-form');
+<script>
+  const loginForm = document.getElementById('login-form');
   const registerForm = document.getElementById('register-form');
   const showRegister = document.getElementById('show-register');
   const showLogin = document.getElementById('show-login');
   const formTitle = document.getElementById('form-title');
-  
+
   // Switch to register form
   showRegister.addEventListener('click', (e) => {
     e.preventDefault();
@@ -58,7 +59,7 @@
     registerForm.classList.remove('hidden');
     formTitle.textContent = 'Register';
   });
-  
+
   // Switch to login form
   showLogin.addEventListener('click', (e) => {
     e.preventDefault();
@@ -66,25 +67,64 @@
     loginForm.classList.remove('hidden');
     formTitle.textContent = 'Login';
   });
-  
-  // Dummy login handler
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Login successful!');
-    window.location.href = 'index.html'; // Redirect to home page
-  });
-  
+
+  // Helper regex patterns
+  const nameRegex = /^[A-Za-z\s]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/;
+
   // Dummy registration handler
   registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const fullName = registerForm.querySelector('input[type="text"]').value.trim();
+    const email = registerForm.querySelector('input[type="email"]').value.trim();
+    const password = registerForm.querySelector('input[type="password"]').value;
+
+    if (!nameRegex.test(fullName)) {
+      alert('Full Name must contain only alphabets.');
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    if (!passwordRegex.test(password)) {
+      alert('Password must be at least 8 characters long and include letters, numbers, and special characters.');
+      return;
+    }
+
     alert('Registration successful!');
-    // Switch to login form after successful registration
     registerForm.classList.add('hidden');
     loginForm.classList.remove('hidden');
     formTitle.textContent = 'Login';
   });
+
+  // Dummy login handler
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username = loginForm.querySelector('input[type="text"]').value.trim();
+    const password = loginForm.querySelector('input[type="password"]').value;
+
+    if (!emailRegex.test(username)) {
+      alert('Username must be a valid email address containing "@" symbol.');
+      return;
+    }
+
+    if (!passwordRegex.test(password)) {
+      alert('Password must be at least 8 characters long and include letters, numbers, and special characters.');
+      return;
+    }
+
+    alert('Login successful!');
+    window.location.href = 'index.html'; // Redirect to home page
+  });
+</script>
+
   
-    </script>
 </html>
     <style>
      
