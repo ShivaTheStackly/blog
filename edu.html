@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Category</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /*header*/
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 26px;
+    }
+    .logo img {
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    /* Navigation Styles */
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    .main-nav li {
+      position: relative;
+    }
+    .main-nav > ul > li > a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      display: block;
+    }
+    .main-nav > ul > li > a:hover {
+      background-color: #d60000;
+      color: #fff;
+    }
+
+    /* Dropdown */
+    .main-nav li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 0;
+      list-style: none;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    .main-nav li:hover ul {
+      display: block;
+    }
+    .main-nav li ul li a {
+      padding: 10px 15px;
+      display: block;
+      color: #000;
+      background-color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .main-nav li ul li a:hover {
+      background-color: #eee;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .right-section .icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .sign-in {
+      background: #d60000;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Secondary Nav */
+    .secondary-nav {
+      background: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    .secondary-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 12px;
+      border-right: 1px solid #444;
+    }
+    .secondary-nav a:last-child {
+      border-right: none;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    /* Responsive Styles */
+
+/* General Mobile Styles  for nav*/
+@media (max-width: 920px) {
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+  .left-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    display: none; /* Hide menu by default */
+  }
+  .main-nav.active ul {
+    display: flex;
+  }
+  .main-nav li {
+    width: 100%;
+    text-align: left;
+  }
+  .main-nav > ul > li > a {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+  }
+  .main-nav li ul {
+    position: static;
+    box-shadow: none;
+  }
+  .right-section {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Tablet and Medium Screens */
+@media (max-width: 1366px) and (min-width: 921px) {
+  .main-nav ul {
+    gap: 15px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+}
+
+/* Smaller Tablets and iPads */
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    padding: 8px 10px;
+  }
+  .left-section, .right-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  .main-nav.active ul {
+    display: flex;
+  }
+  .secondary-nav {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+  .sign-in {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .main-nav > ul > li > a {
+    font-size: 14px;
+  }
+  .right-section {
+    gap: 10px;
+  }
+}
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+/*footer page*/
+.footer {
+  background-color: #16191f;
+  color: #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.social-icons i {
+  margin-right: 10px;
+  font-size: 1rem;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #fff;
+}
+
+.top-posts .post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.top-posts img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.top-posts p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #fff;
+}
+
+.top-posts span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.logo {
+  
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.scroll-top button {
+  background: red;
+  border: none;
+  padding: 0.9rem 0.7rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 5.2rem;
+  cursor: pointer;
+}
+
+.footer-bottom-secondary {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-secondary .secondary-nav a {
+  margin: 0 8px;
+  color: #aaa;
+  text-decoration: none;
+}
+/* Existing styles remain unchanged */
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .container, .news-container, .highlight, .cards, .blog-grid, .card-container, .contain {
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  .news-container, .blog-grid, .story-grid, .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight, .blog-card, .articlee {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header, .header, .tech-header, .top-stories .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .ad-banner {
+    height: 300px;
+  }
+
+  .video-highlight, .main-image, .card img, .blog-card img, .articlee img, .story img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sideba {
+    width: 100%;
+    position: relative;
+  }
+
+  .contain {
+    flex-direction: column;
+  }
+
+  .articlee img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-container, .footer-bottom, .footer-bottom-secondary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-nav, .footer-bottom-secondary .secondary-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .scroll-top {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+}
+
+/* Hover Effects with Motion */
+a, h1, h2, h3, h4, p, span {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Animate on Scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards ease-in-out;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s forwards ease-in-out;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to common elements */
+.main-article, .side-article, .highlight, .sidebar article, .card, .blog-card, .articlee, .story, .social-card {
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+.section-header, .news-container, .grid, .highlight .text, .sidebar article, .blog-grid, .cards {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Touch target spacing */
+.tab-button, .section-header a {
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Additional mobile padding */
+.tab-content, .card, .main-article, .side-article, .highlight .text, .articlee, .story {
+  padding: 15px;
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+ 
+  margin-left: 140px;
+  margin-right: 140px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.tag {
+  background: #e60023;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.card-content h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+/* ----- MOBILE RESPONSIVE DESIGN ----- */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card-content h2 {
+    font-size: 16px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .author p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .author {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .author img {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
+}
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+.home li {
+  display: inline-block;
+}
+
+.home a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 16px;
+  background-color:   #d60000;
+  ;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home a:hover {
+  background-color: #d60000;
+  color: white;
+}
+/* Hide on screens wider than 920px (desktop) */
+@media (min-width: 921px) {
+  .home {
+    display: none;
+  }
+}
+
+/* Show on screens 920px or less (tablet/mobile) */
+@media (max-width: 920px) {
+  .home {
+    display: block;
+  }
+}
+.home li {
+  display: inline-block;
+}
+
+.home a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  padding: 10px 16px;
+  background-color:   #d60000;
+  ;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home a:hover {
+  background-color: #d60000;
+  color: white;
+}
+/* Hide on screens wider than 920px (desktop) */
+@media (min-width: 921px) {
+  .home {
+    display: none;
+  }
+}
+
+/* Show on screens 920px or less (tablet/mobile) */
+@media (max-width: 920px) {
+  .home {
+    display: block;
+  }
+}
+  </style>
+</head>
+<body class="bg-white text-black font-serif">
+  
+<!-- Top Header -->
+<div class="top-header">
+  <div class="left-section">
+    <ul class="home">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    <div class="logo">
+      <img src="logo-stackly (1).png" alt="logo">
+     
+    </div>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li>
+        <a href="index.html">HOME</a>
+        
+      </li>
+     
+     
+      <li>
+        <a href="#">BREAKING NEWS </a>
+        <ul>
+          <li><a href="breaking.html">Headlines</a></li>
+          <li><a href="breaking.html    ">Alerts</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">SUBSCRIPTION</a>
+        <ul>
+          <li><a href="signin.html">Wekkly Updates</a></li>
+          <li><a href="signin.html">Monthly NewsLetter</a></li>
+          <li><a href="signin.html">Special Announcement</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">PAGES</a>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Contact</a></li>
+          <li><a href="signin.html">Login</a></li>
+         
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="right-section">
+    <!-- Bookmark Icon -->
+    
+
+    <button class="sign-in">SIGN IN</button>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<div class="secondary-nav">
+  <a href="test.html">Travel</a>
+  <a href="new.html">Business</a>
+  
+  <a href="edu.html">Education</a>
+  <a href="polity.html">Political Analysis</a>
+  <a href="int.html">International</a>
+</div>
+  <div class="max-w-7xl mx-auto py-12 px-4">
+    
+    <h1 class="text-4xl font-bold text-center mb-12">Category: World</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="relative">
+          <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/news.webp" alt="Eco Travel" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_u4yrau.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="text-xs bg-red-600 text-white px-2 py-1 rounded-full">WORLD</span>
+          <h2 class="text-lg font-bold mt-2">Nine of the best TV shows to watch this July</h2>
+          <p class="text-sm text-gray-500 mt-2 flex items-center gap-2">
+            <span class="font-medium">McKiney</span> | July 11, 2024
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/pol.webp" alt="Road Trip" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <span class="text-xs bg-red-600 text-white px-2 py-1 rounded-full">WORLD</span>
+          <h2 class="text-lg font-bold mt-2">Business
+            The Killers give England fans euphoric night at O2</h2>
+          <p class="text-sm text-gray-500 mt-2 flex items-center gap-2">
+            <span class="font-medium">McKiney</span> | May 31, 2024
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/wd-1-3.webp" alt="Train Travel" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <span class="text-xs bg-red-600 text-white px-2 py-1 rounded-full">WORLD</span>
+          <h2 class="text-lg font-bold mt-2">From rough sleeping to advising Prince William</h2>
+          <p class="text-sm text-gray-500 mt-2 flex items-center gap-2">
+            <span class="font-medium">McKiney</span> | May 31, 2024
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+  
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/wd2.webp" alt="Europe Train Adventure">
+      <div class="card-content">
+        <span class="tag">WORLD</span>
+        <h2>China hits back at Nato over Russia accusations</h2>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+          <p>McKiney • May 30, 2024</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12.webp" alt="Solo Travel">
+      <div class="card-content">
+        <span class="tag">WORLD</span>
+        <h2>England have to be ‘perfect’ to beat Spain – Southgate</h2>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+          <p>McKiney • May 30, 2024</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/wd-1-1.webp" alt="Shoestring Budget Travel">
+      <div class="card-content">
+        <span class="tag">WORLD</span>
+        <h2>Biden stands defiant on critical night – but gaffes mar fightback</h2>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+          <p>McKiney • May 30, 2024</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+ 
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>At Stackly, we believe in the power of information to inspire, educate, and transform. We're a passionate team of writers, developers, and innovators dedicated to bringing you fresh perspectives across technology, startups, development, cybersecurity, and digital trends.</p>
+        <p><strong>Email Us:</strong> info@gmail.com</p>
+        <p><strong>Contact:</strong> 784-8894-678</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/people/Stackly/pfbid02Ndinga9bDhksYhUtFKXkiLaYi8PHtgF11FxSvs1i1euTHLxwndPfDVUvJ3NsLJmjl/?rdid=eKFuC8OU12X0WTT3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/The_Stackly" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/the_stackly?igsh=cGNsOWlwenh2enpz" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/the-stackly/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        
+      </div>
+  
+      <div class="footer-section links">
+        
+      </div>
+  
+      <div class="footer-section categories">
+        
+      </div>
+  
+      <div class="footer-section top-posts">
+        <h3>Top Posts</h3>
+        <div class="post">
+          <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="Smart factories leverage IoT and AI">
+          <div>
+            <p>Smart factories leverage IoT and AI,</p>
+            <span><i class="far fa-calendar-alt"></i> March 26, 2024</span>
+          </div>
+        </div>
+        <div class="post">
+          <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/tec-2.webp" alt="The Joy of Cooking">
+          <div>
+            <p>The Joy of Cooking: Rediscovering the</p>
+            <span><i class="far fa-calendar-alt"></i> March 26, 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="branding">
+        <div class="logo"><img src="logo-stackly (1).png" alt="">
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">HOME</a>
+        <a href="breaking.html">BREAKING NEWS</a>
+        <a href="about.html">ABOUT US</a>
+        
+        <a href="login.html">CONTACT</a>
+      </nav>
+      
+    </div>
+  
+  
+  </footer>
+</body>
+<script>const signInBtn = document.querySelector('.sign-in');
+
+    signInBtn.addEventListener('click', () => {
+      window.location.href = 'signin.html';
+    });
+    </script>
+</html>
