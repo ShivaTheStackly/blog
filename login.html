@@ -119,11 +119,54 @@
 
     
 // Form submission functionality
-    document.getElementById('supportForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      alert('Thank you! Your message has been sent.');
-      this.reset();
-    });
+document.getElementById('supportForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const phone = this.phone.value.trim();
+    const website = this.website.value.trim();
+    const message = this.message.value.trim();
+
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const urlRegex = /^(https?:\/\/)?([\w\-]+\.)+[a-z]{2,6}\/?([^\s]*)$/i;
+
+    // Name validation
+    if (!nameRegex.test(name)) {
+      alert("Name must contain only alphabets.");
+      return;
+    }
+
+    // Email validation
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Phone number validation
+    if (phone && !phoneRegex.test(phone)) {
+      alert("Phone number must be exactly 10 digits.");
+      return;
+    }
+
+    // Website URL validation
+    if (website && !urlRegex.test(website)) {
+      alert("Please enter a valid website URL.");
+      return;
+    }
+
+    // Message word count validation
+    const wordCount = message.split(/\s+/).filter(word => word.length > 0).length;
+    if (wordCount < 20) {
+      alert("Message must contain at least 20 words.");
+      return;
+    }
+
+    alert('Thank you! Your message has been sent.');
+    this.reset();
+  });
     
     // Live chat button dummy functionality
     function startLiveChat() {
