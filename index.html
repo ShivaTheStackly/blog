@@ -1461,9 +1461,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
   transform: scale(1.1); /* Zoom-in effect on image hover */
 }
 
-.articlee .text {
-  flex: 1;
-}
+
 
 .articlee .tag {
   font-size: 0.75rem;
@@ -1877,7 +1875,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 }
 
 .logo {
-  background-color: red;
+  
   padding: 0.5rem;
   border-radius: 6px;
 }
@@ -2078,7 +2076,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, p:hover, span:hover {
 .carousel-item {
     width: 25%;
     padding: 10px;
-    text-align: center;
+    
     position: relative;
 }
 
@@ -2569,6 +2567,13 @@ body.dark-mode .tab-button.active {
   width: 100px;
   margin-left: 20px;
 }
+#main-nav {
+  display: none;
+}
+
+#main-nav.active {
+  display: block;
+}
   </style>
 </head>
 <body>
@@ -2600,7 +2605,7 @@ body.dark-mode .tab-button.active {
       <li>
         <a href="#">SUBSCRIPTION</a>
         <ul>
-          <li><a href="signin.html">Wekkly Updates</a></li>
+          <li><a href="signin.html">Weekly Updates</a></li>
           <li><a href="signin.html">Monthly NewsLetter</a></li>
           <li><a href="signin.html">Special Announcement</a></li>
         </ul>
@@ -2620,15 +2625,13 @@ body.dark-mode .tab-button.active {
     <!-- Bookmark Icon -->
    <!-- Bookmark Icon -->
 <div class="icon" id="bookmark-icon" onclick="bookmarkPage()">
-  <i class="fa-regular fa-bookmark"></i>
+ 
 </div>
 
 <!-- Dark Mode / Light Mode Toggle -->
 <div class="icon" id="dark-mode-toggle" onclick="toggleDarkMode()">
   <i class="fa-solid fa-moon"></i>
 </div>
-
-
 
 
     <button class="sign-in">SIGN IN</button>
@@ -2639,9 +2642,9 @@ body.dark-mode .tab-button.active {
 <div class="secondary-nav">
   <a href="test.html">Travel</a>
   <a href="new.html">Business</a>
-  <a href="test.html">Education</a>
-  <a href="new.html">Political Analysis</a>
-  <a href="test.html">International</a>
+  <a href="edu.html">Education</a>
+  <a href="polity.html">Political Analysis</a>
+  <a href="int.html">International</a>
 </div>
 
 <div class="container">
@@ -2698,7 +2701,7 @@ body.dark-mode .tab-button.active {
     <div class="news-tabs">
       <div class="tabs">
         <button class="tab-button active" onclick="showTab('latest')">Latest News</button>
-        <button class="tab-button" onclick="showTab('business')">Business News</button>
+        <button class="tab-button" onclick="showTab('business')">World News</button>
         <button class="tab-button" onclick="showTab('sports')">Sports News</button>
       </div>
     
@@ -2706,8 +2709,10 @@ body.dark-mode .tab-button.active {
         <ul>
           <li><strong>Smart factories leverage IoT and AI</strong><br><small>March 26, 2024</small></li>
           <li><strong>The Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
-          <li><strong>Smart factories leverage IoT and AI</strong><br><small>March 26, 2024</small></li>
-          <li><strong>The Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
+          <li>
+            
+            
+            e Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
           <li><strong>Smart factories leverage IoT and AI</strong><br><small>March 26, 2024</small></li>
           <li><strong>The Joy of Cooking: Rediscovering</strong><br><small>March 26, 2024</small></li>
         </ul>
@@ -2942,7 +2947,7 @@ body.dark-mode .tab-button.active {
 
 
 <div class="header">
-  <h2><span>▮</span> Bussiness</h2>
+  <h2><span></span> Business</h2>
 </div>
 <div class="blog-grid">
   <div class="blog-card">
@@ -2951,7 +2956,7 @@ body.dark-mode .tab-button.active {
       <h3>The Future of Work: Adapting to Changing</h3>
       <div class="card-footer">
         <div>📅 March 26, 2024</div>
-        <span>🔖</span>
+        
       </div>
     </div>
   </div>
@@ -2961,7 +2966,7 @@ body.dark-mode .tab-button.active {
       <h3>Strategies for Scaling Your Startup: Tips from</h3>
       <div class="card-footer">
         <div>📅 May 30, 2024</div>
-        <span>🔖</span>
+        
       </div>
     </div>
   </div>
@@ -2971,7 +2976,7 @@ body.dark-mode .tab-button.active {
       <h3>The Art of Hosting: Planning the Perfect</h3>
       <div class="card-footer">
         <div>📅 May 31, 2024</div>
-        <span>🔖</span>
+      
       </div>
     </div>
   </div>
@@ -2981,7 +2986,7 @@ body.dark-mode .tab-button.active {
       <h3>Funding Your Venture: A Guide to Securing</h3>
       <div class="card-footer">
         <div>📅 May 31, 2024</div>
-        <span>🔖</span>
+        
       </div>
     </div>
   </div>
@@ -2991,7 +2996,7 @@ body.dark-mode .tab-button.active {
       <h3>Data Talk: Best Apps, Code Tips, Cool</h3>
       <div class="card-footer">
         <div>📅 July 11, 2024</div>
-        <span>🔖</span>
+        
       </div>
     </div>
   </div>
@@ -3001,7 +3006,7 @@ body.dark-mode .tab-button.active {
       <h3>Why both businesses and scammers love India’s</h3>
       <div class="card-footer">
         <div>📅 July 12, 2024</div>
-        <span>🔖</span>
+       
       </div>
     </div>
   </div>
@@ -3009,7 +3014,7 @@ body.dark-mode .tab-button.active {
 <section class="tech-section">
   <div class="tech-header">
     <div class="icon-title">
-      <span class="icon"><i class="fa-solid fa-location-arrow"></i></span>
+      
       <h2>Technology</h2>
     </div>
     <div class="view-all">
@@ -3024,7 +3029,7 @@ body.dark-mode .tab-button.active {
       <p>To mark the first UK show of artist Herni Brande, developers ThemesCamp and German studio</p>
       <div class="card-footer">
         <span><i class="fa-regular fa-calendar"></i> July 11, 2024</span>
-        <i class="fa-regular fa-bookmark"></i>
+       
       </div>
     </div>
 
@@ -3035,7 +3040,7 @@ body.dark-mode .tab-button.active {
       <p>Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam Risus rutrum ultrices pretium</p>
       <div class="card-footer">
         <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
-        <i class="fa-regular fa-bookmark"></i>
+      
       </div>
     </div>
 
@@ -3046,7 +3051,7 @@ body.dark-mode .tab-button.active {
       <p>Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam Risus rutrum ultrices pretium</p>
       <div class="card-footer">
         <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
-        <i class="fa-regular fa-bookmark"></i>
+      
       </div>
     </div>
   </div>
@@ -3061,7 +3066,7 @@ body.dark-mode .tab-button.active {
         <h4>Biden stands defiant on critical night</h4>
         <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
       </div>
-      <i class="fa-regular fa-bookmark"></i>
+     
     </div>
     <div class="popular-item">
       <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/05/image-12-4.webp" alt="" />
@@ -3069,7 +3074,7 @@ body.dark-mode .tab-button.active {
         <h4>Work-Life Balance: Tips for Juggling</h4>
         <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
       </div>
-      <i class="fa-regular fa-bookmark"></i>
+    
     </div>
     <div class="popular-item">
       <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
@@ -3077,7 +3082,7 @@ body.dark-mode .tab-button.active {
         <h4>Winter Dressing Tips When It’s Cold</h4>
         <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
       </div>
-      <i class="fa-regular fa-bookmark"></i>
+      
     </div>
     <div class="popular-item">
       <img src="https://byteflows.net/wp/forcast-main/wp/newspaper/wp-content/uploads/sites/2/2024/07/image-14.webp" alt="" />
@@ -3085,7 +3090,7 @@ body.dark-mode .tab-button.active {
         <h4>Winter Dressing Tips When It’s Cold</h4>
         <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
       </div>
-      <i class="fa-regular fa-bookmark"></i>
+      
     </div>
     <div class="social-follow">
       <h2>Your Trusted Source for<br><span>Accurate and Timely Updates!</span></h2>
@@ -3154,7 +3159,8 @@ body.dark-mode .tab-button.active {
     <div class="metaa">
       <span><i class="fa-regular fa-user"></i> McKiney</span>
       <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
-      <i class="fa-regular fa-bookmark"></i>
+     
+
     </div>
   </div>
   <div class="story">
@@ -3164,7 +3170,8 @@ body.dark-mode .tab-button.active {
     <div class="metaa">
       <span><i class="fa-regular fa-user"></i> McKiney</span>
       <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
-      <i class="fa-regular fa-bookmark"></i>
+   
+
     </div>
   </div>
   <div class="story">
@@ -3204,7 +3211,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> July 11, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+         
+
         </div>
       </div>
     </div>
@@ -3218,7 +3226,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+        
+
         </div>
       </div>
     </div>
@@ -3232,7 +3241,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> May 31, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+          
+
         </div>
       </div>
     </div>
@@ -3247,7 +3257,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+          
+
         </div>
       </div>
     </div>
@@ -3261,7 +3272,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+         
+
         </div>
       </div>
     </div>
@@ -3275,7 +3287,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+         
+
         </div>
       </div>
     </div>
@@ -3288,7 +3301,8 @@ body.dark-mode .tab-button.active {
         <div class="metaa">
           <span><i class="fa-regular fa-user"></i> McKiney</span>
           <span><i class="fa-regular fa-calendar"></i> July 12, 2024</span>
-          <i class="fa-regular fa-bookmark"></i>
+         
+
         </div>
       </div>
     </div>
@@ -3319,14 +3333,24 @@ body.dark-mode .tab-button.active {
     </div>
 
     <div class="footer-section links">
-      
+      <h3>Quick Link</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Headlines</li>
+        <li>Bookmarks</li>
+        
+        <li>Contact</li>
       </ul>
     </div>
 
     <div class="footer-section categories">
-      
+      <h3>Top Categories</h3>
       <ul>
-       
+        <li>Travel</li>
+        <li>Bussiness</li>
+        <li>Education</li>
+        <li>Political Analysis</li>
+        <li>International</li>
       </ul>
     </div>
 
@@ -3361,7 +3385,7 @@ body.dark-mode .tab-button.active {
       <a href="login.html">CONTACT</a>
     </nav>
     <div class="scroll-top">
-      <button><i class="fas fa-chevron-up"></i></button>
+      <a href="index.html"><button><i class="fas fa-chevron-up"></i></button></a>
     </div>
   </div>
 
@@ -3369,6 +3393,28 @@ body.dark-mode .tab-button.active {
 </footer>
 
 <script>
+
+function saveBookmark(el) {
+  const storyEl = el.closest('.story');
+  
+  const storyData = {
+    image: storyEl.querySelector('img').src,
+    tag: storyEl.querySelector('.tag').innerText,
+    title: storyEl.querySelector('h3').innerText,
+    author: storyEl.querySelector('.fa-user').parentElement.innerText,
+    date: storyEl.querySelector('.fa-calendar').parentElement.innerText
+  };
+
+  let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+  bookmarks.push(storyData);
+  localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+  el.classList.remove('fa-regular');
+  el.classList.add('fa-solid');
+  el.style.color = '#d60000';
+
+  alert("Bookmarked! Visit bookmarks.html to view it.");
+}
   // Bookmark page functionality
   function bookmarkPage() {
     alert("Page Bookmarked!");
@@ -3466,7 +3512,9 @@ function toggleDarkMode() {
     icon.classList.add('fa-moon');
   }
 }
-
+document.getElementById('scrollBtn').addEventListener('click', function () {
+    document.getElementById('main-nav').classList.toggle('active');
+  });
 </script>
 
 </body>
